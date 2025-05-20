@@ -2,15 +2,19 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .reveal {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s ease-out;
-}
-
-.reveal.active {
+    will-change: opacity, transform;
+    backface-visibility: hidden;
+  }
+  
+  .reveal.active {
     opacity: 1;
     transform: translateY(0);
-}
+  }
+  
